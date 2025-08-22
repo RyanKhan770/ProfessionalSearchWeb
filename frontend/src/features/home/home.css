@@ -1,0 +1,427 @@
+body {
+  background-color: var(--linkedin-bg);
+}
+
+.home-container {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  color: var(--linkedin-text);
+}
+
+.home-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left sidebar */
+.sidebar {
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+}
+
+.profile-summary {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.profile-bg {
+  height: 56px;
+  background-color: var(--linkedin-blue-light);
+}
+
+.profile-content {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-top: -40px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: var(--linkedin-border);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.profile-headline {
+  color: var(--linkedin-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Main content */
+.main-content {
+  width: 100%;
+}
+
+.welcome-banner {
+  background-color: white;
+  color: var(--linkedin-text);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-banner h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--linkedin-text);
+}
+
+.welcome-banner p {
+  margin: 0;
+  color: var(--linkedin-text-light);
+}
+
+.search-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-section h2 {
+  margin-bottom: 1rem;
+  color: var(--linkedin-text);
+  font-size: 1.2rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--border-radius-sm);
+  background-color: white;
+  color: var(--linkedin-text);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  border-color: var(--linkedin-blue);
+  box-shadow: 0 0 0 1px var(--linkedin-blue);
+  outline: none;
+}
+
+.search-button {
+  background-color: var(--linkedin-blue);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-button:hover {
+  background-color: var(--linkedin-blue-dark);
+}
+
+.users-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.users-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--linkedin-text);
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.loading, .error-message, .no-users {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--linkedin-text-light);
+}
+
+.error-message {
+  color: var(--linkedin-error);
+}
+
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.user-card {
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  background-color: white;
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.user-card:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.user-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--linkedin-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 0.5rem;
+  text-align: center;
+  color: var(--linkedin-text);
+}
+
+.user-email, .user-location, .user-bio {
+  color: var(--linkedin-text-light);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.user-bio {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.user-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  background-color: rgba(10, 102, 194, 0.1);
+  color: var(--linkedin-blue);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--linkedin-border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-weight: var(--font-weight-semibold);
+  color: var(--linkedin-text);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--linkedin-text-light);
+}
+
+.connect-button {
+  background-color: var(--linkedin-blue);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.connect-button:hover {
+  background-color: var(--linkedin-blue-dark);
+}
+
+.loading, .error-message, .no-users {
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--linkedin-text-light);
+}
+
+.error-message {
+  color: var(--linkedin-error);
+  background-color: rgba(204, 16, 22, 0.1);
+  border-radius: var(--border-radius-md);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .user-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .avatar-placeholder {
+    font-size: 2.5rem;
+  }
+  .user-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem;
+  }
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+  .user-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .avatar-placeholder {
+    font-size: 2.2rem;
+  }
+  .user-name {
+    font-size: 1.2rem;
+  }
+}
+
+.loading,
+.no-users {
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+}
+
+.error-message {
+  text-align: center;
+  padding: 1.5rem;
+  color: #fff;
+  background-color: #ff0000;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .users-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .user-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  .avatar-placeholder {
+    font-size: 2.5rem;
+  }
+  .user-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem;
+  }
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+  .user-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .avatar-placeholder {
+    font-size: 2.2rem;
+  }
+  .user-name {
+    font-size: 1.2rem;
+  }
+}

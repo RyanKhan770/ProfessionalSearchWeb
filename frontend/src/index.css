@@ -1,0 +1,225 @@
+:root {
+  /* LinkedIn color palette */
+  --linkedin-blue: #0a66c2;
+  --linkedin-blue-light: #0b74df;
+  --linkedin-blue-dark: #004182;
+  --linkedin-bg: #f3f2ef;
+  --linkedin-text: #191919;
+  --linkedin-text-light: #666666;
+  --linkedin-border: #dcdcdc;
+  --linkedin-divider: #e0e0e0;
+  --linkedin-focus: #0a66c2;
+  --linkedin-success: #057642;
+  --linkedin-error: #cc1016;
+  --linkedin-button-text: #ffffff;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Border radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--linkedin-bg);
+  color: var(--linkedin-text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--linkedin-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--linkedin-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Cards styling */
+.card {
+  background-color: #fff;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--linkedin-divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body {
+  padding: var(--spacing-md);
+}
+
+.card-footer {
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--linkedin-divider);
+}
+
+/* Form elements */
+input, textarea, select {
+  padding: 0.75rem;
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--linkedin-text);
+  width: 100%;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--linkedin-focus);
+  box-shadow: 0 0 0 1px var(--linkedin-focus);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--linkedin-text);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--linkedin-blue);
+  color: var(--linkedin-button-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--linkedin-blue-light);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--linkedin-text);
+  border: 1px solid var(--linkedin-border);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Helpers */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mb-2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-4 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-5 {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mt-1 {
+  margin-top: var(--spacing-xs);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-3 {
+  margin-top: var(--spacing-md);
+}
+
+.mt-4 {
+  margin-top: var(--spacing-lg);
+}
+
+.mt-5 {
+  margin-top: var(--spacing-xl);
+}
+
+/* Error styling */
+.error-text {
+  color: var(--linkedin-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

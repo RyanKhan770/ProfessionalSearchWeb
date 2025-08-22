@@ -1,0 +1,122 @@
+.page-not-found {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--linkedin-bg);
+  padding: 2rem 1rem;
+}
+
+.not-found-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--linkedin-border);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.02), 0 2px 3px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.not-found-content {
+  flex: 1;
+  padding: 3rem;
+}
+
+.not-found-image {
+  flex: 1;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.not-found-image svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.page-not-found h1 {
+  font-size: 2.5rem;
+  color: var(--linkedin-text);
+  margin: 0 0 1rem;
+}
+
+.page-not-found p {
+  font-size: 1.1rem;
+  color: var(--linkedin-text-light);
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.error-code {
+  display: inline-block;
+  background-color: rgba(10, 102, 194, 0.1);
+  color: var(--linkedin-blue);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 2rem;
+}
+
+.suggestions {
+  font-weight: var(--font-weight-medium);
+  color: var(--linkedin-text);
+}
+
+.helpful-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.helpful-links .btn-primary,
+.helpful-links .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.helpful-links .btn-primary {
+  background-color: var(--linkedin-blue);
+  color: white;
+  border: none;
+}
+
+.helpful-links .btn-primary:hover {
+  background-color: var(--linkedin-blue-dark);
+  text-decoration: none;
+}
+
+.helpful-links .btn-secondary {
+  background-color: transparent;
+  color: var(--linkedin-blue);
+  border: 1px solid var(--linkedin-blue);
+}
+
+.helpful-links .btn-secondary:hover {
+  background-color: rgba(10, 102, 194, 0.1);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .not-found-container {
+    flex-direction: column-reverse;
+  }
+  
+  .not-found-content {
+    padding: 2rem;
+  }
+  
+  .not-found-image {
+    height: 200px;
+    width: 100%;
+  }
+}

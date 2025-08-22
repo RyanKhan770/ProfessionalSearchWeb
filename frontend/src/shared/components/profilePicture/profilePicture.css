@@ -1,0 +1,150 @@
+.profile-picture-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture-wrapper {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px var(--linkedin-border);
+  transition: all 0.2s ease;
+}
+
+.profile-picture-container:hover .profile-picture-wrapper {
+  border-color: var(--linkedin-blue-light);
+}
+
+.profile-picture-small .profile-picture-wrapper {
+  width: 48px;
+  height: 48px;
+  border-width: 2px;
+}
+
+.profile-picture-medium .profile-picture-wrapper {
+  width: 104px;
+  height: 104px;
+  border-width: 3px;
+}
+
+.profile-picture-large .profile-picture-wrapper {
+  width: 152px;
+  height: 152px;
+  border-width: 3px;
+}
+
+.profile-picture-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-picture-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--linkedin-blue);
+  color: white;
+  font-weight: var(--font-weight-semibold);
+}
+
+.profile-picture-small .profile-picture-placeholder {
+  font-size: 1.5rem;
+}
+
+.profile-picture-medium .profile-picture-placeholder {
+  font-size: 3rem;
+}
+
+.profile-picture-large .profile-picture-placeholder {
+  font-size: 4.5rem;
+}
+
+.profile-picture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border-radius: 50%;
+}
+
+.profile-picture-container:hover .profile-picture-overlay {
+  opacity: 1;
+}
+
+.picture-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.picture-action-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.picture-action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.upload-btn:hover {
+  background-color: rgba(10, 102, 194, 0.8);
+}
+
+.delete-btn:hover {
+  background-color: rgba(204, 16, 22, 0.8);
+}
+
+.uploading-spinner {
+  font-size: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.profile-picture-small .picture-action-btn {
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
+
+.profile-picture-small .uploading-spinner {
+  font-size: 1rem;
+}
+
+.profile-picture-large .picture-action-btn {
+  font-size: 1.5rem;
+  padding: 0.75rem;
+}
+
+.profile-picture-large .uploading-spinner {
+  font-size: 3rem;
+}

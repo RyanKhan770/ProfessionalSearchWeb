@@ -1,0 +1,221 @@
+.login-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.login-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--linkedin-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.login-subtitle {
+  text-align: center;
+  color: var(--linkedin-text-light);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.label-tag {
+  color: var(--linkedin-text);
+  font-weight: var(--font-weight-medium);
+  font-size: 0.9rem;
+}
+
+.input-tag {
+  padding: 0.75rem;
+  border: 1px solid var(--linkedin-border);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  color: var(--linkedin-text);
+  transition: all 0.3s ease;
+}
+
+.input-tag:focus {
+  border-color: var(--linkedin-blue);
+  box-shadow: 0 0 0 1px var(--linkedin-blue);
+  outline: none;
+}
+
+.input-tag:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.error-text {
+  color: var(--linkedin-error);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.submit-button {
+  background-color: var(--linkedin-blue);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover {
+  background-color: var(--linkedin-blue-dark);
+}
+
+.submit-button:disabled {
+  background-color: var(--linkedin-blue);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--linkedin-text-light);
+  font-size: 0.95rem;
+}
+
+.register-link a {
+  color: var(--linkedin-blue);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  color: var(--linkedin-text-light);
+  font-size: 0.9rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--linkedin-border);
+}
+
+.divider::before {
+  margin-right: 1rem;
+}
+
+.divider::after {
+  margin-left: 1rem;
+}
+
+.input-tag:focus {
+  outline: none;
+  border-color: #ff0000;
+  background-color: rgba(0, 29, 41, 0.9) !important;
+}
+
+.input-tag:hover {
+  border-color: #ff0000;
+}
+
+.input-tag::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.password-toggle-icon {
+  color: #ffffff !important;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.error-text {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #ff0000;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid #ff5c1c;
+  background-color: #ff5c1c;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+.submit-button:disabled {
+  background-color: rgba(255, 92, 28, 0.5);
+  border-color: rgba(255, 92, 28, 0.5);
+  cursor: not-allowed;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.25rem;
+  color: #ccc;
+}
+
+.register-link a {
+  color: #e25109;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+
+  .login-container h1 {
+    font-size: 2rem;
+  }
+}
