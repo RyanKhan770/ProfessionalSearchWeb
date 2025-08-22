@@ -1,5 +1,6 @@
 import axiosInstance from './axiosinstance';
 
+<<<<<<< HEAD
 // Auth endpoints
 export const login = (data: {username: string, password: string}) => {
   return axiosInstance.post('/auth/login', data);
@@ -67,4 +68,25 @@ export const uploadProfilePicture = (imageFile: File) => {
 
 export const deleteProfilePicture = () => {
   return axiosInstance.delete('/users/deleteProfilePicture');
+=======
+export const login = (data: {username: string, password: string}) => {
+   return axiosInstance.post('/auth/login', data);
+};
+
+export const register = (data: {username: string, email: string, password: string}) => {
+   return axiosInstance.post('/auth/register', data);
+};
+
+// Fix the endpoint path to match your backend route
+export const getUserList = () => {
+   return axiosInstance.get('/users');  // Changed from '/auth/users' to '/users'
+};
+
+export const searchUsers = (query: string) => {
+  return axiosInstance.get(`/users/search?query=${query}`);  // Changed from '/auth/users/search' to '/users/search'
+};
+
+export const updateProfile = (data: {username: string, email: string}) => {
+    return axiosInstance.put('/users/profile', data);
+>>>>>>> e383b20c27efaae52f850442894360ca316df6b6
 };
